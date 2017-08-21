@@ -1,0 +1,1 @@
+create table if not exists tweets(tweetid varchar,tweettext varchar,tweetobject clob)

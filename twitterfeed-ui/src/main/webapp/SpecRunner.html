@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Jasmine Spec Runner v2.7.0</title>
+
+  <link rel="shortcut icon" type="image/png" href="js/vendor/jasmine-2.7.0/jasmine_favicon.png">
+  <link rel="stylesheet" href="js/vendor/jasmine-2.7.0/jasmine.css">
+
+  <script src="js/vendor/jasmine-2.7.0/jasmine.js"></script>
+  <script src="js/vendor/jasmine-2.7.0/jasmine-html.js"></script>
+  <script src="js/vendor/jasmine-2.7.0/boot.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+  <script src="js/vendor/underscore-min.js"></script>
+  <script src="js/vendor/backbone-min.js"></script>
+  
+  <!--  source files  -->
+  <script src="js/app.js"></script>
+  <script src="js/views/homeview.js"></script>
+  <script src="js/models/tweet.js"></script>
+  <script src="js/collections/tweetlist.js"></script>
+
+  
+
+</head>
+
+<body>
+	<div id='testcontent' style="display: none">
+   </div>
+	<!--  spec files  -->
+  <script src="spec/ViewSpec.js"></script>
+  <script type="text/template" id="feed-area">
+	   <li class="slds-feed__item no-padding">
+		<article class="slds-post" id="feedItem">
+				<header class="slds-post__header slds-media no-margin">
+					<div class="slds-media__figure">
+					<a href="javascript:void(0);" class="slds-avatar slds-avatar_circle slds-avatar_large">
+					<img alt="Jason Rodgers" src="<%= user.profile_image_url %>" title="">
+					</a>
+				</div>
+				<div class="slds-media__body">
+					<div class="slds-grid slds-grid_align-spread slds-has-flexi-truncate">
+						<p class="slds-truncate no-margin gray-font" title="Jenna Davis"><a class="font-weight-bold black-font" href="javascript:void(0);"><%= user.name  %> </a> @<%= user.screen_name  %> </p>
+					</div>
+					<p class="slds-text-body_small gray-font"><%= created_time %></p>
+				</div>
+			</header>
+			<div class="padded-container">
+				<div class="slds-post__content slds-text-longform custom-postcontent " >
+					<%= tweetText %>
+						
+				</div>
+				<div class="panel-image" style="display:<%= hiddenImg %>"> 
+					<img src="<%= url %> " class="panel-image-preview" style="border-radius: 5px;width:100%"/>
+				</div>
+			</div>
+			<footer class="slds-post__footer">
+				<ul class="slds-post__footer-meta-list slds-list_horizontal slds-has-dividers_left slds-text-title" >
+					<li class="slds-item" > <img style="width:30px;padding-right:10px" src="assets/retweet_318-140306.jpg"/> <%= retweet_count %> </li>
+				</ul>
+			</footer>
+			
+		</article>  
+		<hr class="no-margin">
+		</li>
+	</script>
+</body>
+</html>
