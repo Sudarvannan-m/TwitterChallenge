@@ -13,11 +13,14 @@ Instructions for Testing Service Api:
 1)	Mvn Package command on parent project runs the JUnit test cases for the service and dao classes.
 
 Rest API’s
-String getTweets(int count) 
-	Returns the last ‘n’ tweets for the twitterHandle in JSON format
-String searchTweets(String searchString)
-	Returns the tweets that matches the search string in JSON format.
+
+	String getTweets(int count) 
+		Returns the last ‘n’ tweets for the twitterHandle in JSON format
+
+	String searchTweets(String searchString)
+		Returns the tweets that matches the search string in JSON format.
 	
 Assumptions:
 	Both Tweets and Replies for the timeline are considered for the count
+	Video and Gif are not handled as per requirement spec. Image and text for tweet are handled.
 	
